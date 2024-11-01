@@ -35,3 +35,22 @@ export const reviews = [
     img: "https://avatar.vercel.sh/jane",
   },
 ];
+
+import pro1 from "../image/recentproject/nlp ss.png";
+
+export const dataRecent = [
+  {
+    title: "MultiStep Form",
+    description: "A Simple And Powerful Form Builder With Drag And Drop Features",
+    image: pro1,
+    url: "https://github.com/ahmadshahfarhan",
+    engine: "laravel blade tailwind css ",
+  },
+  {
+    title: "NLP insitut Indonesia",
+    description: "This website was created to fulfill the final assignment of the SMKDEV Frontend Developer Bootcamp Batch 1. I learn a lot like how to slicing design UI/UX to website and learning about Nextjs and Tailwindcss.",
+    image: pro1,
+    url: "https://github.com/ahmadshahfarhan",
+    engine: "laravel blade tailwind css javascript",
+  },
+];
