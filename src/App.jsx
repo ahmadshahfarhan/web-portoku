@@ -1,7 +1,7 @@
 import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
 import About from "./components/About";
-import {Experience} from "./components/Experience";
+import { Experience } from "./components/Experience";
 import { AnimatedBeamDemo } from "./components/skils";
 import Recent from "./components/Recent";
 import "./css/porto.css";
