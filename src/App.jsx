@@ -9,15 +9,13 @@ import "./css/porto.css";
 function App() {
   return (
     <>
-      <div className="bg-[#171717] mx-auto" style={{ height: "1000vh" }}>
+      <div className="mx-auto">
         <Sidebar />
         <Home />
-        <div className="container">
-          <About />
-          <Experience />
-          <AnimatedBeamDemo />
-          <Recent />
-        </div>
+        <About />
+        <Experience />
+        <AnimatedBeamDemo />
+        <Recent />
       </div>
     </>
   );

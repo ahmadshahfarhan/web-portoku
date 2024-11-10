@@ -4,7 +4,7 @@ import { dataHome } from "../assets/api/admin";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#171717]">
       <div className=" relative">
         <div className="">
           <p className=" text-white text-center text-[140px] font-extrabold mb-[-60px]">

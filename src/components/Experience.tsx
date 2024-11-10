@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 import Marquee from "./ui/Marque";
 import { reviews } from "../assets/api/admin";
 
-const firstRow = reviews.slice(0, reviews.length );
+const firstRow = reviews.slice(0, reviews.length);
 
 const ReviewCard = ({
   img,
@@ -47,17 +47,19 @@ const ReviewCard = ({
 
 export function Experience() {
   return (
-    <>
-      <h1 className=" text-2xl font-bold text-white mt-6 mb-6">Experience</h1>
-      <div className="relative flex w-full flex-col justify-center overflow-hidden rounded-2xl">
-        <Marquee pauseOnHover className="[--duration:80s]">
-          {firstRow.map((review) => (
-            <ReviewCard key={review.tanggal} {...review} />
-          ))}
-        </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/10 dark:from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/10 dark:from-background"></div>
+    <div className="bg-[#171717]">
+      <div className="py-10 container">
+        <h1 className=" text-2xl font-bold text-white">Experience</h1>
+        <div className="relative flex w-full flex-col justify-center overflow-hidden rounded-2xl">
+          <Marquee pauseOnHover className="[--duration:80s]">
+            {firstRow.map((review) => (
+              <ReviewCard key={review.tanggal} {...review} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/10 dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/10 dark:from-background"></div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

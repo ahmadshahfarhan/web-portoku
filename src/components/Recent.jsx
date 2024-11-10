@@ -4,8 +4,8 @@ import { BorderBeam } from "./ui/borderBeem";
 
 export default function Recent() {
   return (
-    <div>
-      <div className="mt-20">
+    <div className="bg-[#171717]">
+      <div className="py-10 container">
         <h1
           aria-label="About me"
           className=" text-white text-[80px] text-left font-bold leading-[0,9em] tracking-tighter"
@@ -15,7 +15,7 @@ export default function Recent() {
         {dataRecent.map((recent, index) => (
           <div className=" mt-14" key={index}>
             <div className="bg-zinc-200 dark:bg-zinc-800 rounded-2xl relative h-[500px]">
-              <BorderBeam size={350} duration={12} delay={14} />
+              <BorderBeam size={350} duration={12} delay={10} />
               <div className="p-10">
                 <div className="flex gap-x-2 items-center">
                   <a
