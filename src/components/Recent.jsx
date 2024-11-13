@@ -15,7 +15,7 @@ export default function Recent() {
         {dataRecent.map((recent, index) => (
           <div className=" mt-14" key={index}>
             <div className="bg-zinc-200 dark:bg-zinc-800 rounded-2xl relative h-[500px]">
-              <BorderBeam size={350} duration={12} delay={10} />
+              <BorderBeam className=" z-10" size={350} duration={12} delay={10} />
               <div className="p-10">
                 <div className="flex gap-x-2 items-center">
                   <a

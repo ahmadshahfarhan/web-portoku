@@ -5,18 +5,18 @@ import { Experience } from "./components/Experience";
 import { AnimatedBeamDemo } from "./components/skils";
 import Recent from "./components/Recent";
 import "./css/porto.css";
+import Contact from "./components/Contact";
 
 function App() {
   return (
     <>
-      <div className="mx-auto">
-        <Sidebar />
-        <Home />
-        <About />
-        <Experience />
-        <AnimatedBeamDemo />
-        <Recent />
-      </div>
+      <Sidebar />
+      <Home />
+      <About />
+      <Experience />
+      <AnimatedBeamDemo />
+      <Recent />
+      <Contact/>
     </>
   );
 }

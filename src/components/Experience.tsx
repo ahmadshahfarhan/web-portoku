@@ -49,7 +49,7 @@ export function Experience() {
   return (
     <div className="bg-[#171717]">
       <div className="py-10 container">
-        <h1 className=" text-2xl font-bold text-white">Experience</h1>
+        <h1 className=" text-2xl font-bold text-white py-3">Experience</h1>
         <div className="relative flex w-full flex-col justify-center overflow-hidden rounded-2xl">
           <Marquee pauseOnHover className="[--duration:80s]">
             {firstRow.map((review) => (
