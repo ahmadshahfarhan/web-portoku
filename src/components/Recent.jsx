@@ -15,7 +15,12 @@ export default function Recent() {
         {dataRecent.map((recent, index) => (
           <div className=" mt-14" key={index}>
             <div className="bg-zinc-200 dark:bg-zinc-800 rounded-2xl relative h-[500px]">
-              <BorderBeam className=" z-10" size={350} duration={12} delay={10} />
+              <BorderBeam
+                className=" z-10"
+                size={350}
+                duration={12}
+                delay={10}
+              />
               <div className="p-10">
                 <div className="flex gap-x-2 items-center">
                   <a
@@ -77,13 +82,17 @@ export default function Recent() {
                     width={600}
                     height={600}
                     src={recent.image}
-                    alt=""
+                    alt={recent.title}
                   />
                 </div>
               </div>
             </div>
           </div>
         ))}
+        <div className=" space-y-5 py-24 text-center">
+          <h2 className="text-5xl font-bold text-white text-center">See other Project</h2>
+          <button className="bg-black hover:bg-gray-800 text-white border-[1px] border-gray-800 px-8 py-[10px] rounded-md text-md font-semibold">Load more</button>
+        </div>
       </div>
     </div>
   );

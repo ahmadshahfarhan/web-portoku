@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "../lib/utils";
 import Marquee from "./ui/Marque";
 import { reviews } from "../assets/api/admin";
+import GitHubCalendar from "react-github-calendar";
 
 const firstRow = reviews.slice(0, reviews.length);
 
@@ -58,6 +59,9 @@ export function Experience() {
           </Marquee>
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/10 dark:from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/10 dark:from-background"></div>
+        </div>
+        <div className="flex items-center justify-center rounded-xl text-white border border-b-0 border-slate-700 p-4 bg-zinc-200 dark:bg-zinc-800 lg:mt-8">
+          <GitHubCalendar colorScheme="dark" errorMessage="Error" loading={false} username="ahmadshahfarhan" />
         </div>
       </div>
     </div>

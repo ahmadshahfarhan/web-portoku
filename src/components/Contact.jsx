@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../assets/image/ganteng.jpg";
 import FlickeringGrid from "./ui/FlickeringGrid";
+import { Iphone15Pro } from "./ui/mobile";
 import Footer from "./footer";
 
 export default function Contact() {
@@ -17,15 +18,14 @@ export default function Contact() {
           height={2000}
           width={2000}
         />
-        <div className="py-5 flex items-center justify-between rounded-lg w-full">
-          <div>
-            <img src={image} width={300} height={300} alt="" />
+        <div className="py-5 flex gap-x-44 justify-center rounded-lg w-full container">
+          <div className="bg">
+            <div className="lg:h-[670px] lg;mt-16">
+              <Iphone15Pro className="size-full" src={image} />
+            </div>
           </div>
           <div>
-            <form
-              className="flex flex-col space-y-8 w-full container"
-              action="javascript:void(0)"
-            >
+            <form className="flex flex-col space-y-8 w-full" action="">
               <h1 className="font-bold lg:text-5xl lg:py-20 text-[#171717]">
                 Contact
               </h1>
@@ -33,6 +33,7 @@ export default function Contact() {
                 <input
                   className="p-1 pb-3 border-b-[2.3px] border-gray-600 w-[630px] focus:outline-none focus:border-transparent transition duration-300 placeholder-gray-400 placeholder:font-bold placeholder:text-xl bg-transparent"
                   placeholder="Your Name"
+                  name="name"
                   type="text"
                 />
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out input-underline"></span>
@@ -41,6 +42,7 @@ export default function Contact() {
                 <input
                   className="p-1 pb-3 border-b-[2.3px] border-gray-600 w-[630px] focus:outline-none focus:border-transparent transition duration-300 placeholder-gray-400 placeholder:font-bold placeholder:text-xl bg-transparent"
                   placeholder="Your email"
+                  name="email"
                   type="text"
                 />
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out input-underline"></span>
@@ -49,6 +51,7 @@ export default function Contact() {
                 <input
                   className="p-1 pb-3 border-b-[2.3px] border-gray-600 w-[630px] focus:outline-none focus:border-transparent transition duration-300 placeholder-gray-400 placeholder:font-bold placeholder:text-xl bg-transparent"
                   placeholder="Subject"
+                  name="telpon"
                   type="text"
                 />
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out input-underline"></span>
@@ -57,7 +60,7 @@ export default function Contact() {
                 <textarea
                   className="p-1 pb-3 border-b-[2.3px] border-gray-600 w-[630px] focus:outline-none focus:border-transparent transition duration-300 placeholder-gray-400 placeholder:font-bold placeholder:text-xl bg-transparent"
                   placeholder="Your Message"
-                  name=""
+                  name="message"
                   id=""
                   rows={4}
                 ></textarea>
@@ -72,10 +75,10 @@ export default function Contact() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="h-6 w-6"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-6 w-6"
                 >
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
