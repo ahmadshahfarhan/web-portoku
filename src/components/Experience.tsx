@@ -61,7 +61,7 @@ export function Experience() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/10 dark:from-background"></div>
         </div>
         <div className="flex items-center justify-center rounded-xl text-white border border-b-0 border-slate-700 p-4 bg-zinc-200 dark:bg-zinc-800 lg:mt-8">
-          <GitHubCalendar colorScheme="dark" errorMessage="Error" loading={false} username="ahmadshahfarhan" />
+          <GitHubCalendar colorScheme="dark" errorMessage="get data is error" loading={false} username="ahmadshahfarhan" />
         </div>
       </div>
     </div>

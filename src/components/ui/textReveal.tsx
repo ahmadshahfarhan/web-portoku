@@ -20,7 +20,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   const words = text.split(" ");
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[143vh]", className)}>
+    <div ref={targetRef} className={cn("relative z-0", className)}>
       <div className={"sticky top-0 flex items-center bg-transparent"}>
         <p
           className={
