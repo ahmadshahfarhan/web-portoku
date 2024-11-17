@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/image/ganteng.jpg";
+import video from "../assets/video/id card.mp4";
 import FlickeringGrid from "./ui/FlickeringGrid";
 import { Iphone15Pro } from "./ui/mobile";
 import Footer from "./footer";
@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="py-5 flex gap-x-44 justify-center rounded-lg w-full container">
           <div className="bg">
             <div className="lg:h-[670px] lg;mt-16">
-              <Iphone15Pro className="size-full" src={image} />
+              <Iphone15Pro className="size-full" src={video} />
             </div>
           </div>
           <div>

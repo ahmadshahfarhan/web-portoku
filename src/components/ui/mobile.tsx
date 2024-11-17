@@ -53,19 +53,30 @@ export function Iphone15Pro({
       />
       <path
         d="M21.25 75C21.25 44.2101 46.2101 19.25 77 19.25H355C385.79 19.25 410.75 44.2101 410.75 75V807C410.75 837.79 385.79 862.75 355 862.75H77C46.2101 862.75 21.25 837.79 21.25 807V75Z"
-        className="fill-[#E5E5E5] dark:fill-[#404040] stroke-[#E5E5E5] dark:stroke-[#404040] stroke-[0.5]"
+        className="fill-[#E5E5E5] dark:white stroke-[#E5E5E5] dark:white stroke-[0.5]"
       />
 
       {src && (
-        <image
-          href={src}
+        <foreignObject
           x="21.25"
-          y="19.25"
+          y="75"
           width="389.5"
-          height="843.5"
-          preserveAspectRatio="xMidYMid slice"
+          height="732"
           clipPath="url(#roundedCorners)"
-        />
+        >
+          <video
+            src={src}
+            controls={false}
+            autoPlay
+            muted
+            loop
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        </foreignObject>
       )}
       <path
         d="M154 48.5C154 38.2827 162.283 30 172.5 30H259.5C269.717 30 278 38.2827 278 48.5C278 58.7173 269.717 67 259.5 67H172.5C162.283 67 154 58.7173 154 48.5Z"
