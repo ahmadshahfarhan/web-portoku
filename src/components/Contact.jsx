@@ -16,13 +16,11 @@ export default function Contact() {
           maxOpacity={0.2}
           flickerChance={0.2}
           height={2000}
-          width={2000}
+          width={1800}
         />
-        <div className="py-5 flex gap-x-44 justify-center rounded-lg w-full container">
-          <div className="bg">
-            <div className="lg:h-[670px] lg;mt-16">
-              <Iphone15Pro className="size-full" src={video} />
-            </div>
+        <div className="py-5 flex flex-wrap gap-x-44 justify-center rounded-lg w-full container">
+          <div className="lg:h-[670px] lg;mt-16">
+            <Iphone15Pro className="size-full" src={video} />
           </div>
           <div>
             <form className="flex flex-col space-y-8 w-full" action="">

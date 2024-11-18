@@ -6,7 +6,6 @@ export interface Iphone15ProProps extends SVGProps<SVGSVGElement> {
   height?: number;
   src?: string;
 }
-
 export function Iphone15Pro({
   width = 433,
   height = 882,

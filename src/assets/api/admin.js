@@ -1,4 +1,3 @@
-import { title } from "framer-motion/client";
 import ganteng from "../image/ganteng.jpg";
 import pro1 from "../image/recentproject/nlp ss.png";
 
@@ -67,5 +66,33 @@ export const dataRecent = [
     image: pro1,
     url: "https://github.com/ahmadshahfarhan",
     engine: "laravel blade tailwind css javascript",
+  },
+];
+
+export const Footers = [
+  {
+    id: 1,
+    title: "github",
+    url: "https://github.com/ahmadshahfarhan",
+  },
+  {
+    id: 2,
+    title: "gitlab",
+    url: "https://gitlab.com/ahmadshahfarhann",
+  },
+  {
+    id: 3,
+    title: "instagram",
+    url: "https://www.instagram.com/_farhannshah/",
+  },
+  {
+    id: 4,
+    title: "gmail",
+    url: "ahmadshahfarhanngmail.com",
+  },
+  {
+    id: 5,
+    title: "linkedin",
+    url: "https://www.linkedin.com/in/ahmadshahfarhan/",
   },
 ];

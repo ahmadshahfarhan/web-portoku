@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
-import Globe from "../assets/image/gif/globe.gif";
+import Globel from "../assets/image/gif/globe.gif";
 import { dataHome } from "../assets/api/admin";
+import Meteors from "./ui/meteors";
 
 export default function Home() {
   return (
     <div className="bg-[#171717]">
+      <Meteors number={8} />
       <div className=" relative">
         <div className="">
           <p className=" text-white text-center text-[140px] font-extrabold mb-[-60px]">
@@ -33,7 +35,7 @@ export default function Home() {
               </p>
             ))}
             <div className=" bg-gray-900 p-1 rounded-full">
-              <img width={60} height={60} src={Globe} alt="" />
+              <img width={60} height={60} src={Globel} alt="" />
             </div>
           </div>
         </div>
