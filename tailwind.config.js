@@ -34,9 +34,13 @@ export default {
       },
       container: {
         center: true,
-        padding: "4rem",
+        padding:{
+          DEFAULT: "0.9rem",
+          md: "9rem",
+          lg: "9rem",
+          sm: "9rem",
+        }
       },
     },
-  },
-  plugins: [],
+  },  
 };
