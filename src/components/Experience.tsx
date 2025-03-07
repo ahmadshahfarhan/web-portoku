@@ -60,7 +60,7 @@ export function Experience() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/10 dark:from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/10 dark:from-background"></div>
         </div>
-        <div className="flex flex-wrap gap-x-20 items-center justify-center rounded-xl text-white border border-b-0 border-slate-700 p-4 bg-zinc-200 dark:bg-zinc-800 lg:mt-8">
+        <div className="flex flex-wrap gap-x-12 gap-y-4 items-center justify-center rounded-xl text-white border border-b-0 border-slate-700 p-4 bg-zinc-200 dark:bg-zinc-800 lg:mt-8 mt-5">
           <div className="bg-slate-300 p-2 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,12 +78,14 @@ export function Experience() {
               <path d="M9 18c-4.51 2-5-2-7-2"></path>
             </svg>
           </div>
-          <GitHubCalendar
-            colorScheme="dark"
-            errorMessage="get data is error"
-            loading={false}
-            username="ahmadshahfarhan"
-          />
+          <div className=" lg:w-[780px] w-full">
+            <GitHubCalendar
+              colorScheme="dark"
+              errorMessage="get data is error"
+              loading={false}
+              username="ahmadshahfarhan"
+            />
+          </div>
         </div>
       </div>
     </div>

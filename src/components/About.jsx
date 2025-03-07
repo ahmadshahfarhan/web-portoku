@@ -6,7 +6,7 @@ import TextRevealByWord from "./ui/textReveal";
 export default function About() {
   return (
     <div className="bg-[#171717]">
-      <div className="container gaps">
+      <div className="container lg:gaps">
         <div className=" flex items-center justify-between">
           <h1
             aria-label="About me"
