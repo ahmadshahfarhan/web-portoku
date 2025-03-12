@@ -12,7 +12,17 @@ export default function Sidebar() {
     if (plus.classList.contains("open")) {
       toggle.textContent = "X";
     } else {
-      toggle.textContent = "O";
+      toggle.innerHTML = ` <svg
+      width="35"
+      height="35"
+      viewBox="0 0 50 50"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="10" y="10" width="18" height="3" fill="black" />
+      <rect x="10" y="22" width="30" height="2" fill="black" />
+      <rect x="20" y="34" width="18" height="3" fill="black" />
+    </svg>`;
     }
 
     if (toggle.textContent === "O") {
@@ -22,9 +32,19 @@ export default function Sidebar() {
     function closeSidebar() {
       sidebar.classList.remove("w-full");
       plus.classList.remove("open");
-      toggle.textContent = "O";
+      toggle.innerHTML = ` <svg
+      width="35"
+      height="35"
+      viewBox="0 0 50 50"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="10" y="10" width="18" height="3" fill="black" />
+      <rect x="10" y="22" width="30" height="2" fill="black" />
+      <rect x="20" y="34" width="18" height="3" fill="black" />
+    </svg>`;
     }
-    
+
     document.addEventListener("click", (event) => {
       if (event.target.id === "add") {
         closeSidebar();
@@ -68,9 +88,19 @@ export default function Sidebar() {
           <button
             id="toggle"
             onClick={Opennav}
-            className="absolute top-5 right-5 bg-white shadow-lg shadow-gray-400 text-xl p-3 rounded-full cursor-pointer"
+            className="absolute top-5 right-5 bg-white shadow-lg shadow-gray-400 text-xl w-11 h-11 flex items-center justify-center rounded-full cursor-pointer font-semibold border-[1px] border-gray-500"
           >
-            O
+            <svg
+              width="35"
+              height="35"
+              viewBox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="10" y="10" width="18" height="3" fill="black" />
+              <rect x="10" y="22" width="30" height="2" fill="black" />
+              <rect x="20" y="34" width="18" height="3" fill="black" />
+            </svg>
           </button>
         </div>
       </nav>

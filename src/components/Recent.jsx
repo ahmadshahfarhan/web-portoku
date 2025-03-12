@@ -4,24 +4,27 @@ import { BorderBeam } from "./ui/borderBeem";
 
 export default function Recent() {
   return (
-    <div className="bg-[#171717]">
+    <div className="bg-[#171717] bug-border">
       <div className="py-10 container">
         <h1
           aria-label="About me"
-          className=" text-white text-[80px] text-left font-bold leading-[0,9em] tracking-tighter"
+          className=" text-white text-[40px] sm:text-[65px] md:text-[80px] lg:text-[80px] text-left font-bold leading-[0,9em] tracking-tighter"
         >
           Recent Project
         </h1>
         {dataRecent.map((recent, index) => (
-          <div className=" mt-14" key={index}>
-            <div className="bg-zinc-200 dark:bg-zinc-800 rounded-2xl relative h-[500px]">
+          <div className="mt-6" key={index}>
+            <div
+              aria-hidden="true"
+              className="bg-zinc-800 rounded-2xl relative min-h-[500px] overflow-hidden flex flex-col"
+            >
               <BorderBeam
-                className=" z-10"
+                className="z-10"
                 size={350}
                 duration={12}
                 delay={10}
               />
-              <div className="p-10">
+              <div className=" lg:p-10 md:p-10 p-6 flex-grow">
                 <div className="flex gap-x-2 items-center">
                   <a
                     href={recent.url}
@@ -65,33 +68,40 @@ export default function Recent() {
                     </svg>
                   </a>
                 </div>
-                <div className="mt-8">
-                  <h1 className=" text-zinc-100 text-[45px] font-bold">
+                <div className="mt-8 relative z-10">
+                  <h1 className="text-zinc-100 lg:text-[45px] md:text-[45px] text-[30px] font-bold">
                     {recent.title}
                   </h1>
-                  <p className=" text-gray-400 mt-2 w-[90%] max-w-[434px] text-[13px] leading-4 font-bold text-foreground/50">
+                  <p className="text-gray-400 mt-2 w-[90%] max-w-[434px] text-[13px] leading-4 font-bold text-foreground/50">
                     {recent.description}
                   </p>
                   <h2 className="text-gray-400 mt-3 w-[90%] max-w-[434px] text-[15px] leading-4 font-bold text-foreground/50">
                     {recent.engine}
                   </h2>
                 </div>
-                <div className="flex justify-end absolute right-0 bottom-0">
-                  <img
-                    className="rounded-br-2xl rounded-tl-2xl"
-                    width={600}
-                    height={600}
-                    src={recent.image}
-                    alt={recent.title}
-                  />
-                </div>
+              </div>
+              <div className="lg:absolute md:absolute lg:-bottom-2 md:-bottom-2 lg:right-0 md:right-0 relative w-full flex justify-end">
+                <img
+                  alt={recent.title}
+                  fetchpriority="high"
+                  width="1000"
+                  height="600"
+                  decoding="async"
+                  data-nimg="1"
+                  className="w-[80%] object-contain md:w-[55%] lg:max-w-[50%]"
+                  src={recent.image}
+                />
               </div>
             </div>
           </div>
         ))}
         <div className=" space-y-5 py-24 text-center">
-          <h2 className="text-5xl font-bold text-white text-center">See other Project</h2>
-          <button className="bg-black hover:bg-gray-800 text-white border-[1px] border-gray-800 px-8 py-[10px] rounded-md text-md font-semibold">Load more</button>
+          <h2 className="lg:text-5xl md:text-5xl text-4xl font-bold text-white text-center">
+            See other Project
+          </h2>
+          <button className="bg-black hover:bg-gray-800 text-white border-[1px] border-gray-800 px-8 py-[10px] rounded-md text-md font-semibold">
+            Load more
+          </button>
         </div>
       </div>
     </div>

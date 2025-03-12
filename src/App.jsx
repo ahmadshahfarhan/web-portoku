@@ -6,17 +6,19 @@ import { AnimatedBeamDemo } from "./components/skils";
 import Recent from "./components/Recent";
 import "./css/porto.css";
 import Contact from "./components/Contact";
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Sidebar />
       <Home />
       <About />
       <Experience />
       <AnimatedBeamDemo />
       <Recent />
-      <Contact/>
+      <Contact />
     </>
   );
 }

@@ -24,7 +24,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
       <div className={"sticky top-0 flex items-center bg-transparent"}>
         <p
           className={
-            "flex flex-wrap text-xl text-black/20 dark:text-white/20 mt-7 space-x-2 leading-loose"
+            "flex flex-wrap text-xl text-black/20 dark:text-white/20 space-x-2 leading-loose"
           }
         >
           {words.map((word, i) => {

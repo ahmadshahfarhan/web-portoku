@@ -96,3 +96,4 @@ export const Footers = [
     url: "https://www.linkedin.com/in/ahmadshahfarhan/",
   },
 ];
+

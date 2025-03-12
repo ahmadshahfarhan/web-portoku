@@ -5,9 +5,9 @@ import Meteors from "./ui/meteors";
 
 export default function Home() {
   return (
-    <div className="bg-[#171717]">
+    <div className="bg-[#171717] relative overflow-hidden">
       <Meteors number={8} />
-      <div className=" pt-24">
+      <div className=" pt-24 lg:pt-0">
         <div className=" relative">
           <div className="">
             <p className=" text-white text-center text-[83px] md:text-[120px] lg:text-[140px] font-extrabold mb-[-40px] md:mb-[-60px] lg:mb-[-60px]">
@@ -28,17 +28,17 @@ export default function Home() {
               alt={Home.name}
             />
           ))}
-          <div className=" absolute top-1/2 hidden sm:block md:block lg:block xl:block">
+          <div className=" absolute lg:top-1/2 md:top-1/2 sm:top:1/2 top-[-60px] sm:block md:block lg:block xl:block">
             <div className=" bg-zinc-200 dark:bg-neutral-800 rounded-e-full flex gap-5 items-center p-3">
               {dataHome.map((Home) => (
                 <p
                   key={Home}
-                  className="text-white text-sm leading-[18px] w-20"
+                  className="text-white text-sm leading-[18px] lg:w-20 md:w-20 sm:w-20 w-32"
                 >
                   {Home.location}
                 </p>
               ))}
-              <div className=" bg-gray-900 p-1 rounded-full">
+              <div className=" bg-gray-900 p-1 rounded-full lg:w-auto md:w-auto sm:w-auto w-[40px] lg:h-auto md:h-auto sm:h-auto h-[40px]">
                 <img width={60} height={60} src={Globel} alt="" />
               </div>
             </div>

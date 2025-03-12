@@ -40,7 +40,7 @@ export function AnimatedBeamDemo() {
   const div11Ref = useRef<HTMLDivElement>(null); //node
 
   return (
-    <div className="bg-[#171717]">
+    <div className="bg-[#171717] bug-border">
       <div
         className="relative flex h-[600px] w-full items-center justify-center overflow-hidden rounded-lg container"
         ref={containerRef}
@@ -181,8 +181,8 @@ export function AnimatedBeamDemo() {
 
 const Icons = {
   skills: () => (
-    <div className=" bg-zinc-200 dark:bg-zinc-800 rounded-2xl p-5 border-[1px] border-gray-700 ">
-      <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-zinc-300 bg-clip-text text-center text-4xl leading-none text-transparent dark:from-white dark:to-black/20 sm:text-8xl font-semibold tracking-[8px] ">
+    <div className="bg-zinc-800 rounded-2xl lg:p-5 md:p-5 p-4 border-[1px] border-gray-700">
+      <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center text-4xl leading-none text-transparent from-white to-black/20 sm:text-8xl font-semibold lg:tracking-[8px] md:tracking-[6px] tracking-[1px]">
         Skills
       </h1>
     </div>
