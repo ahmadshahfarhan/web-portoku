@@ -4,6 +4,7 @@ import React, { forwardRef, useRef } from "react";
 
 import { cn } from "../lib/utils";
 import { AnimatedBeam } from "./ui/beem";
+import { div } from "framer-motion/client";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -39,138 +40,140 @@ export function AnimatedBeamDemo() {
   const div11Ref = useRef<HTMLDivElement>(null); //node
 
   return (
-    <div
-      className="relative flex h-[600px] w-full items-center justify-center overflow-hidden rounded-lg"
-      ref={containerRef}
-    >
-      <div className="flex size-full flex-col max-h-[500px] items-stretch justify-between gap-10">
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div10Ref}>
-            <Icons.Laravel />
-          </Circle>
-          <Circle ref={div11Ref}>
-            <Icons.Node />
-          </Circle>
+    <div className="bg-[#171717] bug-border">
+      <div
+        className="relative flex h-[600px] w-full items-center justify-center overflow-hidden rounded-lg container"
+        ref={containerRef}
+      >
+        <div className="flex size-full flex-col max-h-[500px] items-stretch justify-between gap-10">
+          <div className="flex flex-row items-center justify-between">
+            <Circle ref={div10Ref}>
+              <Icons.Laravel />
+            </Circle>
+            <Circle ref={div11Ref}>
+              <Icons.Node />
+            </Circle>
+          </div>
+
+          <div className="flex flex-row items-center justify-between">
+            <Circle ref={div1Ref}>
+              <Icons.Html />
+            </Circle>
+            <Circle ref={div5Ref}>
+              <Icons.Next />
+            </Circle>
+          </div>
+
+          <div className="flex flex-row items-center justify-between">
+            <Circle ref={div2Ref}>
+              <Icons.Css />
+            </Circle>
+            <Circle ref={div4Ref} className="size-16">
+              <Icons.skills />
+            </Circle>
+            <Circle ref={div6Ref}>
+              <Icons.Tailwind />
+            </Circle>
+          </div>
+
+          <div className="flex flex-row items-center justify-between">
+            <Circle ref={div3Ref}>
+              <Icons.React />
+            </Circle>
+            <Circle ref={div7Ref}>
+              <Icons.Ts />
+            </Circle>
+          </div>
+
+          <div className="flex flex-row items-center justify-between">
+            <Circle ref={div8Ref}>
+              <Icons.Js />
+            </Circle>
+            <Circle ref={div9Ref}>
+              <Icons.Botstrap />
+            </Circle>
+          </div>
         </div>
 
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div1Ref}>
-            <Icons.Html />
-          </Circle>
-          <Circle ref={div5Ref}>
-            <Icons.Next />
-          </Circle>
+        {/* KANAN  */}
+        <div>
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div5Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={-10}
+            reverse
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div7Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={10}
+            reverse
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div6Ref}
+            toRef={div4Ref}
+            reverse
+          />
+
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div9Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={10}
+            reverse
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div11Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={10}
+            reverse
+          />
         </div>
 
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div2Ref}>
-            <Icons.Css />
-          </Circle>
-          <Circle ref={div4Ref} className="size-16">
-            <Icons.skills />
-          </Circle>
-          <Circle ref={div6Ref}>
-            <Icons.Tailwind />
-          </Circle>
+        {/* KIRI */}
+        <div>
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div10Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={-10}
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div8Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={-10}
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div1Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={-10}
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div2Ref}
+            toRef={div4Ref}
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div3Ref}
+            toRef={div4Ref}
+            curvature={7}
+            endYOffset={10}
+          />
         </div>
-
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div3Ref}>
-            <Icons.React />
-          </Circle>
-          <Circle ref={div7Ref}>
-            <Icons.Ts />
-          </Circle>
-        </div>
-
-        <div className="flex flex-row items-center justify-between">
-          <Circle ref={div8Ref}>
-            <Icons.Js />
-          </Circle>
-          <Circle ref={div9Ref}>
-            <Icons.Botstrap />
-          </Circle>
-        </div>
-      </div>
-
-      {/* KANAN  */}
-      <div>
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div5Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={-10}
-          reverse
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div7Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={10}
-          reverse
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div6Ref}
-          toRef={div4Ref}
-          reverse
-        />
-
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div9Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={10}
-          reverse
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div11Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={10}
-          reverse
-        />
-      </div>
-
-      {/* KIRI */}
-      <div>
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div10Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={-10}
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div8Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={-10}
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div1Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={-10}
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div2Ref}
-          toRef={div4Ref}
-        />
-        <AnimatedBeam
-          containerRef={containerRef}
-          fromRef={div3Ref}
-          toRef={div4Ref}
-          curvature={7}
-          endYOffset={10}
-        />
       </div>
     </div>
   );
@@ -178,8 +181,8 @@ export function AnimatedBeamDemo() {
 
 const Icons = {
   skills: () => (
-    <div className=" bg-zinc-200 dark:bg-zinc-800 rounded-2xl p-5 border-[1px] border-gray-700 ">
-      <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-zinc-300 bg-clip-text text-center text-4xl leading-none text-transparent dark:from-white dark:to-black/20 sm:text-8xl font-semibold tracking-[8px] ">
+    <div className="bg-zinc-800 rounded-2xl lg:p-5 md:p-5 p-4 border-[1px] border-gray-700">
+      <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center text-4xl leading-none text-transparent from-white to-black/20 sm:text-8xl font-semibold lg:tracking-[8px] md:tracking-[6px] tracking-[1px]">
         Skills
       </h1>
     </div>

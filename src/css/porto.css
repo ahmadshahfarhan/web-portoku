@@ -9,6 +9,14 @@
   font-family: "Inria Sans", sans-serif;
 }
 
+/* GAPS GLOBAL */
+@media screen and (max-width: 768px) {
+  .gaps {
+    padding-top: 120px;
+  }
+}
+/* end */
+
 /* width */
 ::-webkit-scrollbar {
   width: 9px;
@@ -56,3 +64,21 @@ hr {
 .plus.open {
   right: 0;
 }
+
+/* CONTACT */
+
+.input-underline {
+  transition: width 0.3s ease-in-out;
+}
+
+input:focus + .input-underline {
+  width: 100%;
+}
+
+textarea:focus + .input-underline {
+  width: 100%;
+}
+
+
+
+
