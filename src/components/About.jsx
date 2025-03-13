@@ -14,7 +14,7 @@ export default function About() {
           >
             About me
           </h1>
-          <div className=" bg-zinc-200 dark:bg-neutral-800 p-1 rounded-full">
+          <div className="bg-neutral-800 p-1 rounded-full">
             <img width={50} height={50} src={Globe} alt="" />
           </div>
         </div>
