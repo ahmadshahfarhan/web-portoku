@@ -46,11 +46,18 @@ export default function Sidebar() {
     }
 
     document.addEventListener("click", (event) => {
-      if (event.target.id === "add") {
+      const sidebar = document.getElementById("add");
+
+      if (event.target === sidebar || sidebar.contains(event.target)) {
         closeSidebar();
       }
     });
   }
+
+  // routing single pages
+  const scrollSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -66,10 +73,18 @@ export default function Sidebar() {
             </div>
           </div>
           <ul className="navbar">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li>
+              <button onClick={() => scrollSection("home")}>Home</button>
+            </li>
+            <li>
+              <button onClick={() => scrollSection("about")}>About</button>
+            </li>
+            <li>
+              <button onClick={() => scrollSection("recent")}>Project</button>
+            </li>
+            <li>
+              <button onClick={() => scrollSection("contact")}>Contact</button>
+            </li>
           </ul>
           <div className="contain-plus">
             <h1>Links</h1>

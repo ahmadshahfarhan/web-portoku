@@ -13,12 +13,11 @@ function App() {
     <>
       <Navbar />
       <Sidebar />
-      <Home />
-      <About />
-      <Experience />
-      <AnimatedBeamDemo />
-      <Recent />
-      <Contact />
+
+      <div id="home"><Home/></div>
+      <div id="about"><About/><Experience/><AnimatedBeamDemo/></div>
+      <div id="recent"> <Recent/></div>
+      <div id="contact"><Contact/></div>
     </>
   );
 }

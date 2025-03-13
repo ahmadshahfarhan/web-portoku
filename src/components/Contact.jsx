@@ -3,8 +3,37 @@ import video from "../assets/video/id card.mp4";
 import FlickeringGrid from "./ui/FlickeringGrid";
 import { Iphone15Pro } from "./ui/mobile";
 import Footer from "./footer";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Mengirim...");
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/send-email",
+        formData
+      );
+      setStatus(response.data.message);
+    } catch (error) {
+      setStatus("Gagal mengirim email");
+    }
+  };
+
   return (
     <>
       <div className=" relative bg-background overflow-hidden border">
@@ -25,7 +54,11 @@ export default function Contact() {
             <Iphone15Pro className="size-full" src={video} />
           </div>
           <div>
-            <form className="flex flex-col space-y-8 w-full" action="">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col space-y-8 w-full"
+              action=""
+            >
               <h1 className="font-bold lg:text-5xl text-2xl lg:py-20 text-[#171717]">
                 Contact
               </h1>
@@ -35,6 +68,7 @@ export default function Contact() {
                   placeholder="Your Name"
                   name="name"
                   type="text"
+                  onChange={handleChange}
                 />
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out input-underline"></span>
               </div>
@@ -44,6 +78,8 @@ export default function Contact() {
                   placeholder="Your email"
                   name="email"
                   type="text"
+                  onChange={handleChange}
+                  required
                 />
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out input-underline"></span>
               </div>
@@ -52,7 +88,9 @@ export default function Contact() {
                   className="p-1 pb-3 border-b-[2.3px] border-gray-600 lg:w-[530px] w-[270px] focus:outline-none focus:border-transparent transition duration-300 placeholder-gray-400 placeholder:font-bold placeholder:text-xl bg-transparent"
                   placeholder="Subject"
                   name="subject"
+                  onChange={handleChange}
                   type="text"
+                  required
                 />
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out input-underline"></span>
               </div>
@@ -61,8 +99,10 @@ export default function Contact() {
                   className="p-1 pb-3 border-b-[2.3px] border-gray-600 lg:w-[530px] w-[270px] focus:outline-none focus:border-transparent transition duration-300 placeholder-gray-400 placeholder:font-bold placeholder:text-xl bg-transparent"
                   placeholder="Your Message"
                   name="message"
+                  onChange={handleChange}
                   id=""
                   rows={4}
+                  required
                 ></textarea>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 ease-in-out input-underline"></span>
               </div>
@@ -88,6 +128,7 @@ export default function Contact() {
                 </span>
               </button>
             </form>
+            <p>{status && status}</p>
           </div>
         </div>
         <div>
