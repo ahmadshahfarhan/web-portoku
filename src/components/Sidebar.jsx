@@ -1,4 +1,5 @@
 import React from "react";
+import { footerIcon } from "../assets/api/admin";
 
 export default function Sidebar() {
   function Opennav() {
@@ -92,10 +93,11 @@ export default function Sidebar() {
               <hr />
             </div>
             <ul className="links flex gap-5">
-              <li>Github</li>
-              <li>LikedIn</li>
-              <li>Instagram</li>
-              <li>Gmail</li>
+              {footerIcon.map((icon) => (
+                <a key={icon.id} target="_blank" href={icon.url} rel=" noperener noreferrer">
+                  <li>{icon.title}</li>
+                </a>
+              ))}
             </ul>
           </div>
         </div>

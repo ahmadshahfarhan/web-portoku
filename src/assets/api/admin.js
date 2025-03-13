@@ -12,7 +12,7 @@ export const dataHome = [
 export const dataAbout = [
   {
     deskripsi:
-     "Hi everyone👋🏼, My name is Ahmad Shah Farhan, and I currently live in Malang Regency, precisely in Turen District.I am a graduate of SMK Telkom Malang, majoring in Software Engineering (RPL). During my time there, I gained a lot of knowledge in the field of Information Technology (IT), which became a strong foundation for my career in software development.I have one year of experience as a Front-End Developer and have basic skills in back-end development using Laravel. My technical skills include:React JSLaravel BladeTailwind CSSJavaScriptCSSAnd other front-end technologies.In addition, I also completed a 6-month internship at a company in Surabaya, where I worked on several projects that expanded my practical knowledge and honed my ability to solve problems in real-world scenarios.I am very passionate about learning, growing, and contributing to innovative projects. I am always open to new opportunities and collaborations, so feel free to contact me. Let's connect and create something amazing together!🚀",
+      "Hi everyone👋🏼, My name is Ahmad Shah Farhan, and I currently live in Malang Regency, precisely in Turen District.I am a graduate of SMK Telkom Malang, majoring in Software Engineering (RPL). During my time there, I gained a lot of knowledge in the field of Information Technology (IT), which became a strong foundation for my career in software development.I have one year of experience as a Front-End Developer and have basic skills in back-end development using Laravel. My technical skills include:React JSLaravel BladeTailwind CSSJavaScriptCSSAnd other front-end technologies.In addition, I also completed a 6-month internship at a company in Surabaya, where I worked on several projects that expanded my practical knowledge and honed my ability to solve problems in real-world scenarios.I am very passionate about learning, growing, and contributing to innovative projects. I am always open to new opportunities and collaborations, so feel free to contact me. Let's connect and create something amazing together!🚀",
   },
 ];
 
@@ -75,11 +75,11 @@ export const Footers = [
     title: "github",
     url: "https://github.com/ahmadshahfarhan",
   },
-  {
-    id: 2,
-    title: "gitlab",
-    url: "https://gitlab.com/ahmadshahfarhann",
-  },
+  // {
+  //   id: 2,
+  //   title: "gitlab",
+  //   url: "https://gitlab.com/ahmadshahfarhann",
+  // },
   {
     id: 3,
     title: "instagram",
@@ -97,3 +97,23 @@ export const Footers = [
   },
 ];
 
+// footer icon
+export const footerIcon = [
+  {
+    id: 1,
+    title: "github",
+    url: "https://github.com/ahmadshahfarhan",
+  },
+
+  {
+    id: 2,
+    title: "instagram",
+    url: "https://www.instagram.com/_farhannshah/",
+  },
+
+  {
+    id: 3,
+    title: "gmail",
+    url: "ahmadshahfarhanngmail.com",
+  },
+];

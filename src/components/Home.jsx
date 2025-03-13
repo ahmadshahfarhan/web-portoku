@@ -29,7 +29,7 @@ export default function Home() {
             />
           ))}
           <div className=" absolute lg:top-1/2 md:top-1/2 sm:top:1/2 top-[-60px] sm:block md:block lg:block xl:block">
-            <div className=" bg-zinc-200 dark:bg-neutral-800 rounded-e-full flex gap-5 items-center p-3">
+            <div className="bg-neutral-800 rounded-e-full flex gap-5 items-center p-3">
               {dataHome.map((Home) => (
                 <p
                   key={Home}
