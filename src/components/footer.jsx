@@ -9,10 +9,10 @@ export default function Footer() {
   const Sosmed3 = Footers.find((Footer) => Footer.id === 5);
 
   return (
-    <div className=" flex justify-between items-center container mb-10 mt-10">
+    <div className="flex justify-between items-center container mb-10 mt-10">
       <div>
         <div className=" flex items-center gap-x-2 mt-2">
-          {Footer1 && (      
+          {Footer1 && (
             <a href={Footer1.url} target="blank">
               <h1 className="font-bold text-lg">{Footer1.title}</h1>
               <svg

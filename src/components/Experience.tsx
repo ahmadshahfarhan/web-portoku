@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { cn } from "../lib/utils";
 import Marquee from "./ui/Marque";
 import { reviews } from "../assets/api/admin";
 import GitHubCalendar from "react-github-calendar";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 const firstRow = reviews.slice(0, reviews.length);
 
@@ -47,9 +49,18 @@ const ReviewCard = ({
 };
 
 export function Experience() {
+  const aosDelay = 300;
+
+  useEffect(() => {
+    aos.init({
+      once: false,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div className="bg-[#171717] bug-border">
-      <div className="py-10 container">
+      <div data-aos="fade-up" data-aos-delay={aosDelay} className="py-10 container">
         <h1 className=" text-2xl font-bold text-white py-3">Experience</h1>
         <div className="relative flex w-full flex-col justify-center overflow-hidden rounded-2xl">
           <Marquee pauseOnHover className="[--duration:80s]">

@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { dataRecent } from "../assets/api/admin";
 import { BorderBeam } from "./ui/borderBeem";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Recent() {
+const aosDelay = 600;
+ useEffect(() => {
+  aos.init({
+    once:false,
+    duration: 1000,
+  });
+ }, []);
   return (
     <div className="bg-[#171717] bug-border">
-      <div className="py-10 container">
+      <div data-aos="fade-up" data-aos-delay={aosDelay} className="py-10 container">
         <h1
           aria-label="About me"
           className=" text-white text-[40px] sm:text-[65px] md:text-[80px] lg:text-[80px] text-left font-bold leading-[0,9em] tracking-tighter"

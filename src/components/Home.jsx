@@ -1,15 +1,24 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Globel from "../assets/image/gif/globe.gif";
 import { dataHome } from "../assets/api/admin";
 import Meteors from "./ui/meteors";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    aos.init({
+      once: false,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div className="bg-[#171717] relative overflow-hidden">
       <Meteors number={8} />
       <div className=" pt-24 lg:pt-0">
         <div className=" relative">
-          <div className="">
+          <div data-aos="fade-up">
             <p className=" text-white text-center text-[83px] md:text-[120px] lg:text-[140px] font-extrabold mb-[-40px] md:mb-[-60px] lg:mb-[-60px]">
               AHMAD
             </p>
@@ -28,7 +37,7 @@ export default function Home() {
               alt={Home.name}
             />
           ))}
-          <div className=" absolute lg:top-1/2 md:top-1/2 sm:top:1/2 top-[-60px] sm:block md:block lg:block xl:block">
+          <div data-aos="fade-right" data-aos-delay="300" className=" absolute lg:top-1/2 md:top-1/2 sm:top:1/2 top-[-60px] sm:block md:block lg:block xl:block">
             <div className="bg-neutral-800 rounded-e-full flex gap-5 items-center p-3">
               {dataHome.map((Home) => (
                 <p

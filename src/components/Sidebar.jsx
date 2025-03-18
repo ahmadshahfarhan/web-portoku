@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { footerIcon } from "../assets/api/admin";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Sidebar() {
   function Opennav() {
@@ -60,6 +62,14 @@ export default function Sidebar() {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
   };
 
+  // aos
+  useEffect(() => {
+    aos.init({
+      once: false,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       <nav id="add" className="fixed z-[999] h-full right-0">
@@ -94,14 +104,19 @@ export default function Sidebar() {
             </div>
             <ul className="links flex gap-5">
               {footerIcon.map((icon) => (
-                <a key={icon.id} target="_blank" href={icon.url} rel=" noperener noreferrer">
+                <a
+                  key={icon.id}
+                  target="_blank"
+                  href={icon.url}
+                  rel=" noperener noreferrer"
+                >
                   <li>{icon.title}</li>
                 </a>
               ))}
             </ul>
           </div>
         </div>
-        <div className="fixed top-5 right-5">
+        <div data-aos="fade-left" data-aos-delay="300" className="fixed top-5 right-5">
           <button
             id="toggle"
             onClick={Opennav}
