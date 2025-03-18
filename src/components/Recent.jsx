@@ -5,22 +5,18 @@ import aos from "aos";
 import "aos/dist/aos.css";
 
 export default function Recent() {
-const aosDelay = 600;
- useEffect(() => {
-  aos.init({
-    once:false,
-    duration: 1000,
-  });
- }, []);
-  return (
-    <div className="bg-[#171717] bug-border">
-      <div data-aos="fade-up" data-aos-delay={aosDelay} className="py-10 container">
-        <h1
-          aria-label="About me"
-          className=" text-white text-[40px] sm:text-[65px] md:text-[80px] lg:text-[80px] text-left font-bold leading-[0,9em] tracking-tighter"
-        >
-          Recent Project
-        </h1>
+  const aosDelay = 600;
+  useEffect(() => {
+    aos.init({
+      once: false,
+      duration: 1000,
+    });
+  }, []);
+
+  // card component
+  const Card = () => {
+    return (
+      <>
         {dataRecent.map((recent, index) => (
           <div className="mt-6" key={index}>
             <div
@@ -104,6 +100,24 @@ const aosDelay = 600;
             </div>
           </div>
         ))}
+      </>
+    );
+  };
+
+  return (
+    <div className="bg-[#171717] bug-border">
+      <div
+        data-aos="fade-up"
+        data-aos-delay={aosDelay}
+        className="py-10 container"
+      >
+        <h1
+          aria-label="About me"
+          className=" text-white text-[40px] sm:text-[65px] md:text-[80px] lg:text-[80px] text-left font-bold leading-[0,9em] tracking-tighter"
+        >
+          Recent Project
+        </h1>
+        <Card />
         <div className=" space-y-5 py-24 text-center">
           <h2 className="lg:text-5xl md:text-5xl text-4xl font-bold text-white text-center">
             See other Project
