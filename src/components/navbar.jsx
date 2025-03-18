@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       {isVisible && 
-        <nav className="fixed top-4 left-5 right-0 z-20">
+        <nav  className="fixed top-4 left-5 right-0 z-20">
           <img
             className=" absolute top-5 left-5 lg:w-[7%] md:w-[7%] w-[16%]"
             src="https://i.imgur.com/RfFAHOs.png"

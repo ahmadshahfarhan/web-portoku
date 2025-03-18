@@ -1,10 +1,12 @@
 "use client";
 
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef, useRef, useEffect } from "react";
 
 import { cn } from "../lib/utils";
 import { AnimatedBeam } from "./ui/beem";
 import { div } from "framer-motion/client";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -39,9 +41,20 @@ export function AnimatedBeamDemo() {
   const div10Ref = useRef<HTMLDivElement>(null); //laravel
   const div11Ref = useRef<HTMLDivElement>(null); //node
 
+  // aos
+  const aosDelay = 200;
+  useEffect(() => {
+    aos.init({
+      once: false,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div className="bg-[#171717] bug-border">
       <div
+        data-aos-delay={aosDelay}
+        data-aos="fade-up"
         className="relative flex h-[600px] w-full items-center justify-center overflow-hidden rounded-lg container"
         ref={containerRef}
       >

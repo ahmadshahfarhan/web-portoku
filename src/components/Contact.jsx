@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import video from "../assets/video/id card.mp4";
 import FlickeringGrid from "./ui/FlickeringGrid";
 import { Iphone15Pro } from "./ui/mobile";
 import Footer from "./footer";
 import { useState } from "react";
 import axios from "axios";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -33,6 +35,14 @@ export default function Contact() {
       setStatus("Gagal mengirim email");
     }
   };
+  
+  const aosDelay =400;
+  useEffect(() => {
+    aos.init({
+      once:false,
+      duration:1000,
+    });
+  }, []);
 
   return (
     <>
@@ -49,7 +59,7 @@ export default function Contact() {
             width={1800}
           />
         </div>
-        <div className="py-5 flex lg:flex-nowrap flex-wrap justify-center gap-x-24 gap-y-6 rounded-lg w-full container">
+        <div data-aos="fade-up" data-aos-delay={aosDelay} className="py-5 flex lg:flex-nowrap flex-wrap justify-center gap-x-24 gap-y-6 rounded-lg w-full container">
           <div className="lg:h-[670px] lg:mt-16">
             <Iphone15Pro className="size-full" src={video} />
           </div>
