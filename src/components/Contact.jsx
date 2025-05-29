@@ -60,7 +60,7 @@ export default function Contact() {
           />
         </div>
         <div data-aos="fade-up" data-aos-delay={aosDelay} className="py-5 flex lg:flex-nowrap flex-wrap justify-center gap-x-24 gap-y-6 rounded-lg w-full container">
-          <div className="lg:h-[670px] lg:mt-16">
+          <div className="lg:h-[670px] lg:mt-16 md:block hidden">
             <Iphone15Pro className="size-full" src={video} />
           </div>
           <div>

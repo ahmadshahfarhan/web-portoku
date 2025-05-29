@@ -91,7 +91,7 @@ export default function Sidebar() {
               <button onClick={() => scrollSection("about")}>About</button>
             </li>
             <li>
-              <button onClick={() => scrollSection("recent")}>Project</button>
+              <button onClick={() => scrollSection("recent")}>Best Project</button>
             </li>
             <li>
               <button onClick={() => scrollSection("contact")}>Contact</button>
@@ -110,7 +110,7 @@ export default function Sidebar() {
                   href={icon.url}
                   rel=" noperener noreferrer"
                 >
-                  <li>{icon.title}</li>
+                  <li className={icon.title == 'gmail' ? 'hidden' : ''}>{icon.title}</li>
                 </a>
               ))}
             </ul>

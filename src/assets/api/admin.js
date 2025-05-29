@@ -1,5 +1,7 @@
 import ganteng from "../image/ganteng.jpg";
-import pro1 from "../image/recentproject/nlp ss.png";
+import pro1 from "../image/recentproject/srne.svg";
+import pro2 from "../image/recentproject/nlp.svg";
+import pro3 from "../image/recentproject/pkn.svg";
 
 export const dataHome = [
   {
@@ -37,6 +39,17 @@ export const reviews = [
   },
 ];
 
+const hidden = "hidden";
+const visible = "visible";
+
+export const Github = [
+  {
+    title: "ahmad shah farhan",
+    username: "ahmadshahfarhan",
+    kondisi: hidden,
+  },
+];
+
 export const iconRecent = [
   {
     Id: 1,
@@ -53,18 +66,26 @@ export const iconRecent = [
 export const dataRecent = [
   {
     title: "MultiStep Form",
-    description:
-      "A Simple And Powerful Form Builder With Drag And Drop Features",
+    description: "a client questionnaire website.",
     image: pro1,
-    url: "https://github.com/ahmadshahfarhan",
+    url: "https://srne.aus-greenps.com/",
+    Github: "",
     engine: "laravel blade tailwind css ",
   },
   {
-    title: "NLP insitut Indonesia",
-    description:
-      "This website was created to fulfill the final assignment of the SMKDEV Frontend Developer Bootcamp Batch 1. I learn a lot like how to slicing design UI/UX to website and learning about Nextjs and Tailwindcss.",
-    image: pro1,
-    url: "https://github.com/ahmadshahfarhan",
+    title: "NLP insitute Indonesia",
+    description: "a company profile website.",
+    image: pro2,
+    url: "https://nlpinstituteindonesia.com/",
+    Github: "",
+    engine: "laravel blade bootstrap css javascript",
+  },
+  {
+    title: "Class Of Pancasila",
+    description: "a website for learning civics education (PKN) lessons.",
+    image: pro3,
+    url: "https://pkn.sekolah.co.id/",
+    Github: "",
     engine: "laravel blade tailwind css javascript",
   },
 ];
