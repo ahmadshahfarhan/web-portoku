@@ -2,6 +2,9 @@ import ganteng from "../image/ganteng.jpg";
 import pro1 from "../image/recentproject/srne.svg";
 import pro2 from "../image/recentproject/nlp.svg";
 import pro3 from "../image/recentproject/pkn.svg";
+import pro4 from "../image/recentproject/best.svg";
+import pro5 from "../image/recentproject/akbar.svg";
+import pro6 from "../image/recentproject/uncle.svg";
 
 export const dataHome = [
   {
@@ -88,6 +91,30 @@ export const dataRecent = [
     Github: "",
     engine: "laravel blade tailwind css javascript",
   },
+  {
+    title: "Best Aksamedia",
+    description: "an advertising website for the Aksamedia company. I worked on this website during my internship at Aksamedia.",
+    image: pro4,
+    url: "https://best.aksamedia.co.id/",
+    Github: "",
+    engine: "next js bootstrap css javascript",
+  },
+  {
+    title: "Akbar",
+    description: "an online Arabic learning website (akbar) that I worked on when I was still an intern at Aksamedia.",
+    image: pro5,
+    url: "https://akbar.aksamedia.com/",
+    Github: "",
+    engine: "laravel blade bootstrap css javascript",
+  },
+  {
+    title: "Uncle M",
+    description: "An e-commerce website selling distro clothes that I worked on while interning at the Aksamedia company, this website is not yet fully finished because the internship time is over.",
+    image: pro6,
+    url: "https://uncle-m.aksamedia.co.id/",
+    Github: "",
+    engine: "laravel blade tailwind css javascript",
+  },
 ];
 
 export const Footers = [
@@ -96,11 +123,11 @@ export const Footers = [
     title: "github",
     url: "https://github.com/ahmadshahfarhan",
   },
-  // {
-  //   id: 2,
-  //   title: "gitlab",
-  //   url: "https://gitlab.com/ahmadshahfarhann",
-  // },
+  {
+    id: 2,
+    title: "gitlab",
+    url: "https://gitlab.com/ahmadshahfarhann",
+  },
   {
     id: 3,
     title: "instagram",
