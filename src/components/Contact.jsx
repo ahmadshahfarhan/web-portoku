@@ -38,6 +38,7 @@ export default function Contact() {
   
   const aosDelay =400;
   useEffect(() => {
+    window.scrollTo(0, 0);
     aos.init({
       once:false,
       duration:1000,

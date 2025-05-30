@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 
 export default function Home() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     aos.init({
       once: false,
       duration: 1000,

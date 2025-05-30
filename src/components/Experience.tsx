@@ -52,6 +52,7 @@ export function Experience() {
   const aosDelay = 300;
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     aos.init({
       once: false,
       duration: 1000,
