@@ -77,7 +77,7 @@ export const dataRecent = [
   },
   {
     title: "NLP insitute Indonesia",
-    description: "a company profile website.",
+    description: "an Indonesian NLP Institute company profile website. In working on this website, I worked on the backend and a little on the frontend.",
     image: pro2,
     url: "https://nlpinstituteindonesia.com/",
     Github: "",
