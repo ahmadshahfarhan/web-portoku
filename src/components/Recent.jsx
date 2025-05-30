@@ -3,21 +3,25 @@ import { dataRecent } from "../assets/api/admin";
 import { BorderBeam } from "./ui/borderBeem";
 import aos from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Recent() {
   const aosDelay = 600;
   useEffect(() => {
+    window.scrollTo(0, 0);
     aos.init({
       once: false,
       duration: 1000,
     });
   }, []);
 
+  const navigate = useNavigate();
+
   // card component
   const Card = () => {
     return (
       <>
-        {dataRecent.map((recent, index) => (
+        {dataRecent.slice(0, 3).map((recent, index) => (
           <div className="mt-6" key={index}>
             <div
               aria-hidden="true"
@@ -120,14 +124,17 @@ export default function Recent() {
           Best Project
         </h1>
         <Card />
-        {/* <div className=" space-y-5 py-24 text-center">
+        <div className=" space-y-5 py-24 text-center">
           <h2 className="lg:text-5xl md:text-5xl text-4xl font-bold text-white text-center">
             See other Project
           </h2>
-          <button className="bg-black hover:bg-gray-800 text-white border-[1px] border-gray-800 px-8 py-[10px] rounded-md text-md font-semibold">
+          <button
+            onClick={() => navigate("/project")}
+            className="bg-black hover:bg-gray-800 text-white border-[1px] border-gray-800 px-8 py-[10px] rounded-md text-md font-semibold"
+          >
             Load more
           </button>
-        </div> */}
+        </div>
       </div>
     </div>
   );

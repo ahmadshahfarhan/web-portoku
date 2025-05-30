@@ -44,6 +44,7 @@ export function AnimatedBeamDemo() {
   // aos
   const aosDelay = 200;
   useEffect(() => {
+    window.scrollTo(0, 0);
     aos.init({
       once: false,
       duration: 1000,
