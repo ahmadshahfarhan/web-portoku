@@ -72,7 +72,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <nav id="add" className="fixed z-[999] h-full right-0">
+      <nav id="add" className="fixed z-[999] h-full right-0 overflow-hidden">
         <div
           id="plus"
           className="bg-white absolute w-full max-w-lg h-full p-8 plus xl:overflow-y-scroll"
