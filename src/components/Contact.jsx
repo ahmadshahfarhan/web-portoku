@@ -35,13 +35,13 @@ export default function Contact() {
       setStatus("Gagal mengirim email");
     }
   };
-  
-  const aosDelay =400;
+
+  const aosDelay = 400;
   useEffect(() => {
     window.scrollTo(0, 0);
     aos.init({
-      once:false,
-      duration:1000,
+      once: false,
+      duration: 1000,
     });
   }, []);
 
@@ -60,7 +60,11 @@ export default function Contact() {
             width={1800}
           />
         </div>
-        <div data-aos="fade-up" data-aos-delay={aosDelay} className="py-5 flex lg:flex-nowrap flex-wrap justify-center gap-x-24 gap-y-6 rounded-lg w-full container">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={aosDelay}
+          className="py-5 flex lg:flex-nowrap flex-wrap justify-center gap-x-24 gap-y-6 rounded-lg w-full container"
+        >
           <div className="lg:h-[670px] lg:mt-16 md:block hidden">
             <Iphone15Pro className="size-full" src={video} />
           </div>

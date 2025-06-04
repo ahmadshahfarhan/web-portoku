@@ -7,10 +7,13 @@ import Recent from "./components/Recent";
 import "./css/porto.css";
 import Contact from "./components/Contact";
 import Navbar from "./components/navbar";
+import Certificate from "./components/Certificate";
+import { BlurFade } from "./components/ui/blur";
 
 function App() {
   return (
     <>
+     <BlurFade delay={0.3} inView>
       <Navbar />
       <Sidebar />
 
@@ -18,6 +21,7 @@ function App() {
       <div id="about"><About/><Experience/><AnimatedBeamDemo/></div>
       <div id="recent"> <Recent/></div>
       <div id="contact"><Contact/></div>
+     </BlurFade>
     </>
   );
 }

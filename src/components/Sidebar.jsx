@@ -90,6 +90,9 @@ export default function Sidebar() {
             <li>
               <button onClick={() => scrollSection("about")}>About</button>
             </li>
+              <li>
+              <button onClick={() => scrollSection("certificate")}>Certificate</button>
+            </li>
             <li>
               <button onClick={() => scrollSection("recent")}>Best Project</button>
             </li>

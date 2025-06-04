@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { cn } from "../lib/utils";
 import Marquee from "./ui/Marque";
 import { reviews, Github } from "../assets/api/admin";
+import Certificate from "./Certificate";
 import GitHubCalendar from "react-github-calendar";
 import aos from "aos";
 import "aos/dist/aos.css";
@@ -110,6 +111,9 @@ export function Experience() {
             </div>
           </div>
         ))}
+        <div id="certificate">
+          <Certificate />
+        </div>
       </div>
     </div>
   );
