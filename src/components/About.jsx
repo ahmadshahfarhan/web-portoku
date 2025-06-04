@@ -1,4 +1,3 @@
-import React from "react";
 import Globe from "../assets/image/gif/globe.gif";
 import { dataAbout } from "../assets/api/admin";
 import TextRevealByWord from "./ui/textReveal";

@@ -77,7 +77,8 @@ export const dataRecent = [
   },
   {
     title: "NLP insitute Indonesia",
-    description: "an Indonesian NLP Institute company profile website. In working on this website, I worked on the backend and a little on the frontend.",
+    description:
+      "an Indonesian NLP Institute company profile website. In working on this website, I worked on the backend and a little on the frontend.",
     image: pro2,
     url: "https://nlpinstituteindonesia.com/",
     Github: "",
@@ -93,7 +94,8 @@ export const dataRecent = [
   },
   {
     title: "Best Aksamedia",
-    description: "an advertising website for the Aksamedia company. I worked on this website during my internship at Aksamedia.",
+    description:
+      "an advertising website for the Aksamedia company. I worked on this website during my internship at Aksamedia.",
     image: pro4,
     url: "https://best.aksamedia.co.id/",
     Github: "",
@@ -101,7 +103,8 @@ export const dataRecent = [
   },
   {
     title: "Akbar",
-    description: "an online Arabic learning website (akbar) that I worked on when I was still an intern at Aksamedia.",
+    description:
+      "an online Arabic learning website (akbar) that I worked on when I was still an intern at Aksamedia.",
     image: pro5,
     url: "https://akbar.aksamedia.com/",
     Github: "",
@@ -109,11 +112,19 @@ export const dataRecent = [
   },
   {
     title: "Uncle M",
-    description: "An e-commerce website selling distro clothes that I worked on while interning at the Aksamedia company, this website is not yet fully finished because the internship time is over.",
+    description:
+      "An e-commerce website selling distro clothes that I worked on while interning at the Aksamedia company, this website is not yet fully finished because the internship time is over.",
     image: pro6,
     url: "https://uncle-m.aksamedia.co.id/",
     Github: "",
     engine: "laravel blade tailwind css javascript",
+  },
+];
+
+export const dataCertificate = [
+  {
+    title: "Certificate",
+    url: "https://drive.google.com/drive/folders/1O7UW7AC-LicLEjk9D4XWwMyJvzmz-egJ?usp=sharing",
   },
 ];
 
