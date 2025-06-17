@@ -5,6 +5,7 @@ import pro3 from "../image/recentproject/pkn.svg";
 import pro4 from "../image/recentproject/best.svg";
 import pro5 from "../image/recentproject/akbar.svg";
 import pro6 from "../image/recentproject/uncle.svg";
+import pro7 from "../image/recentproject/iwaklelefresh.svg";
 
 export const dataHome = [
   {
@@ -68,6 +69,7 @@ export const iconRecent = [
 
 export const dataRecent = [
   {
+    id: 1,
     title: "MultiStep Form",
     description: "a client questionnaire website.",
     image: pro1,
@@ -76,32 +78,7 @@ export const dataRecent = [
     engine: "laravel blade tailwind css ",
   },
   {
-    title: "NLP insitute Indonesia",
-    description:
-      "an Indonesian NLP Institute company profile website. In working on this website, I worked on the backend and a little on the frontend.",
-    image: pro2,
-    url: "https://nlpinstituteindonesia.com/",
-    Github: "",
-    engine: "laravel blade bootstrap css javascript",
-  },
-  {
-    title: "Class Of Pancasila",
-    description: "a website for learning civics education (PKN) lessons.",
-    image: pro3,
-    url: "https://pkn.sekolah.co.id/",
-    Github: "",
-    engine: "laravel blade tailwind css javascript",
-  },
-  {
-    title: "Best Aksamedia",
-    description:
-      "an advertising website for the Aksamedia company. I worked on this website during my internship at Aksamedia.",
-    image: pro4,
-    url: "https://best.aksamedia.co.id/",
-    Github: "",
-    engine: "next js bootstrap css javascript",
-  },
-  {
+    id: 2,
     title: "Akbar",
     description:
       "an online Arabic learning website (akbar) that I worked on when I was still an intern at Aksamedia.",
@@ -111,6 +88,7 @@ export const dataRecent = [
     engine: "laravel blade bootstrap css javascript",
   },
   {
+    id: 3,
     title: "Uncle M",
     description:
       "An e-commerce website selling distro clothes that I worked on while interning at the Aksamedia company, this website is not yet fully finished because the internship time is over.",
@@ -118,6 +96,44 @@ export const dataRecent = [
     url: "https://uncle-m.aksamedia.co.id/",
     Github: "",
     engine: "laravel blade tailwind css javascript",
+  },
+  {
+    id: 4,
+    title: "Best Aksamedia",
+    description:
+      "an advertising website for the Aksamedia company. I worked on this website during my internship at Aksamedia.",
+    image: pro4,
+    url: "https://best.aksamedia.co.id/",
+    Github: "",
+    engine: "next js bootstrap css javascript",
+  },
+  {
+    id: 5,
+    title: "NLP insitute Indonesia",
+    description:
+      "an Indonesian NLP Institute company profile website. In working on this website, I worked on the backend and a little on the frontend.",
+    image: pro2,
+    url: "https://nlpinstituteindonesia.com/",
+    Github: "",
+    engine: "laravel blade bootstrap css javascript",
+  },
+  {
+    id: 6,
+    title: "Class Of Pancasila",
+    description: "a website for learning civics education (PKN) lessons.",
+    image: pro3,
+    url: "https://pkn.sekolah.co.id/",
+    Github: "",
+    engine: "laravel blade tailwind css javascript",
+  },
+  {
+    id: 7,
+    title: "Iwak Lele Fresh",
+    description: "an ecommerce website selling fish.",
+    image: pro7,
+    url: "https://iwaklelefresh.netlify.app/",
+    Github: "",
+    engine: "react js tailwind css javascript typescript",
   },
 ];
 
