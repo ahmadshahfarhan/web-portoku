@@ -6,6 +6,7 @@ import pro4 from "../image/recentproject/best.svg";
 import pro5 from "../image/recentproject/akbar.svg";
 import pro6 from "../image/recentproject/uncle.svg";
 import pro7 from "../image/recentproject/iwaklelefresh.svg";
+import pro8 from "../image/recentproject/gelas.svg";
 
 export const dataHome = [
   {
@@ -135,6 +136,16 @@ export const dataRecent = [
     Github: "",
     engine: "react js tailwind css javascript typescript",
   },
+  {
+    id: 8,
+    title: "Gelas-A",
+    description:
+      "a website landing-page about edible glass products Edible Glass is an environmentally friendly innovation in the form of glass that can be eaten immediately after use, made from natural materials that are safe to consume and comes in a variety of attractive flavors. Designed to replace disposable plastic cups, Edible Glass not only reduces waste, but also provides a fun and unique drinking experience. Perfect for events, cafes, restaurants or just an everyday sustainable lifestyle.",
+    image: pro7,
+    url: "https://gelas-a.netlify.app/",
+    Github: "",
+    engine: "react js tailwind css javascript typescript",
+  }
 ];
 
 export const dataCertificate = [
