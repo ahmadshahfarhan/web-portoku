@@ -141,7 +141,7 @@ export const dataRecent = [
     title: "Gelas-A",
     description:
       "a website landing-page about edible glass products Edible Glass is an environmentally friendly innovation in the form of glass that can be eaten immediately after use, made from natural materials that are safe to consume and comes in a variety of attractive flavors. Designed to replace disposable plastic cups, Edible Glass not only reduces waste, but also provides a fun and unique drinking experience. Perfect for events, cafes, restaurants or just an everyday sustainable lifestyle.",
-    image: pro7,
+    image: pro8,
     url: "https://gelas-a.netlify.app/",
     Github: "",
     engine: "react js tailwind css javascript typescript",
