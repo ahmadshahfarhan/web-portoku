@@ -51,7 +51,7 @@ export const Github = [
   {
     title: "ahmad shah farhan",
     username: "ahmadshahfarhan",
-    kondisi: hidden,
+    kondisi: visible,
   },
 ];
 
